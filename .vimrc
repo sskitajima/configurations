@@ -1,4 +1,6 @@
-""""" 基本設定 """""
+"--------------------------
+" 基本設定
+"--------------------------
 " エンコーディング
 set encoding=utf-8
 set fileencoding=utf-8
@@ -12,22 +14,29 @@ set fileformats=unix,dos,mac
 set nobackup
 set nowritebackup
 
-set title
-
 " タブとインデント
 set expandtab
 set tabstop=2
+set shiftwidth=4
 set smartindent
 
-""""" 表示とUI """""
+" コマンドモードでtabによるファイル名補完
+set wildmenu
+
+"--------------------------
+" 表示とUI
+"--------------------------
 " カラースキーム
 colorscheme delek
 
 " 行番号の表示
 set number
 
+" タイトルの表示
+set title
+
 " 対応する括弧の表示
-set showmatch
+set showmatch matchline=1
 
 " 長い行を折り返さない
 set nowrap
@@ -40,7 +49,32 @@ set ambiwidth=double
 " クリップボード
 set clipboard+=unnamedplus,unnamed
 
-"""""" 検索 """""
+" 対応する括弧やブレースを表示
+set showmatch matchtime=1
+
+" コメントの色を水色
+hi Comment ctermfg=3
+
+" 編集中の行のハイライト
+set cursorline
+
+" 挿入モードでクリップボードからペーストする時に自動でインデントさせないようにする
+if &term =~ "xterm"
+  let &t_SI .= "\e[?2004h"
+  let &t_EI .= "\e[?2004l"
+  let &pastetoggle = "\e[201~"
+
+  function XTermPasteBegin(ret)
+    set paste
+    return a:ret
+  endfunction
+
+  inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+endif
+
+"--------------------------
+" 検索
+"--------------------------
 " インクリメンタル検索
 set incsearch
 
@@ -53,8 +87,9 @@ set ignorecase
 " ファイル末尾まで検索したら、ファイル先頭から再び検索
 set wrapscan
 
-inoremap jj <Esc>
-
+"--------------------------
+" その他
+"--------------------------
 " 日本語入力がオンのままでも使えるコマンド(Enterキーは必要)
 nnoremap あ a
 nnoremap い i
@@ -62,3 +97,5 @@ nnoremap う u
 nnoremap お o
 nnoremap っd dd
 nnoremap っy yy
+
+inoremap jj <Esc>

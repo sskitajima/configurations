@@ -18,7 +18,7 @@ set nobackup
 " 表示とUI
 "--------------------------
 " カラースキーム
-colorscheme delek
+" colorscheme delek
 
 " 長い行を折り返さない
 set nowrap

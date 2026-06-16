@@ -96,7 +96,6 @@ set shiftwidth=4
 
 set smartindent
 
-
 "--------------------------
 " その他
 "--------------------------
@@ -118,3 +117,34 @@ nnoremap っd dd
 nnoremap っy yy
 
 inoremap jj <Esc>
+
+"--------------------------
+" Plugin
+"--------------------------
+call plug#begin()
+Plug 'ntk148v/vim-horizon'
+Plug 'preservim/nerdtree'
+call plug#end()
+
+"--------------------------
+" Plugin Horizon
+"--------------------------
+" if you don't set this option, this color might not correct
+set termguicolors
+
+colorscheme horizon
+
+" lightline
+let g:lightline = {}
+let g:lightline.colorscheme = 'horizon'
+
+" or this line
+let g:lightline = {'colorscheme' : 'horizon'}
+
+"--------------------------
+" Plugin NERDTreej
+"--------------------------
+" nnoremap <leader>n :NERDTreeFocus<CR>
+" nnoremap <C-n> :NERDTree<CR>
+" nnoremap <C-t> :NERDTreeToggle<CR>
+" nnoremap <C-f> :NERDTreeFind<CR>

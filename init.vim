@@ -124,6 +124,7 @@ inoremap jj <Esc>
 call plug#begin()
 Plug 'ntk148v/vim-horizon'
 Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 "--------------------------
@@ -142,9 +143,15 @@ let g:lightline.colorscheme = 'horizon'
 let g:lightline = {'colorscheme' : 'horizon'}
 
 "--------------------------
-" Plugin NERDTreej
+" Plugin NERDTree
 "--------------------------
 " nnoremap <leader>n :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
 " nnoremap <C-t> :NERDTreeToggle<CR>
 " nnoremap <C-f> :NERDTreeFind<CR>
+
+"--------------------------
+" Plugin git-gutter
+"--------------------------
+let g:gitgutter_highlight_lines = 1
+

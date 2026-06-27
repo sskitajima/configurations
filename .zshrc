@@ -70,7 +70,14 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    man
+    colored-man-pages
+    z
+    fzf
+    command-not-found
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,14 +106,13 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # aliases
 alias vi="nvim"
 alias vim="nvim"
 alias view="nvim -R"
+# alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # zsh styles
 autoload -Uz vcs_info
@@ -129,4 +135,17 @@ export NVM_DIR="$HOME/.nvm"
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach-session -t default || tmux new-session -s default
 fi
+
+
+# Shell custom configurations
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt auto_cd
+setopt hist_ignore_dups
+setopt share_history
+setopt inc_append_history
+
+export HISTFILE=~/.zsh_history
+export HISTSIZE=100000
+export SAVEHIST=100000
 

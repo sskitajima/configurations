@@ -133,7 +133,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Launch zsh by default
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach-session -t default || tmux new-session -s default
+    tmux attach-session -t default || tmux new-session -s default -c "$HOME"
 fi
 
 
@@ -149,3 +149,4 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=100000
 export SAVEHIST=100000
 
+export PATH="$HOME/.local/bin:$PATH"

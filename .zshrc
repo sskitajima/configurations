@@ -75,6 +75,7 @@ plugins=(
     man
     colored-man-pages
     z
+    # autojump
     fzf
     command-not-found
 )
@@ -121,8 +122,11 @@ zstyle ':vcs_info:*' enable
 zstyle ':vcs_info:(svn|git)*' formats '(%s-%b)'
 zstyle 'vcs_info:(svn|git)*' actionformats '(%s-%b|%a)'
 
+# Source zsh-git-prompt
+source $HOME/.config/zsh-git-prompt/zshrc.sh
+
 # Prompt
-PROMPT='%F{green}%n@%m%f:%F{blue}%~%f% > '
+PROMPT='%F{green}%n@%m%f:%F{blue}%~%f% $(git_super_status) $ '
 
 export NVM_DIR="$HOME/.nvm"
 

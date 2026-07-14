@@ -1,6 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+# set PATH so it includes user's private bin dirs if they exist
+[ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
+[ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
+export PATH
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -72,12 +77,13 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    man
+    # man
     colored-man-pages
     z
     # autojump
     fzf
     command-not-found
+    web-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -137,7 +143,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Launch zsh by default
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach-session -t default || tmux new-session -s default -c "$HOME"
+    tmux attach-session -t default || tmux new-session -s default
 fi
 
 
@@ -153,4 +159,4 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=100000
 export SAVEHIST=100000
 
-export PATH="$HOME/.local/bin:$PATH"
+alias suspend="sudo systemctl suspend"

@@ -132,7 +132,8 @@ zstyle 'vcs_info:(svn|git)*' actionformats '(%s-%b|%a)'
 source $HOME/.config/zsh-git-prompt/zshrc.sh
 
 # Prompt
-PROMPT='%F{green}%n@%m%f:%F{blue}%~%f% $(git_super_status) $ '
+# PROMPT='%F{green}%n@%m%f:%F{blue}%~%f% $(git_super_status) $ '
+PROMPT=' %F{cyan}%~ %f% $(git_super_status) $ '
 
 export NVM_DIR="$HOME/.nvm"
 

@@ -169,6 +169,7 @@ export HISTSIZE=100000
 export SAVEHIST=100000
 
 alias suspend="sudo systemctl suspend"
+alias lock="loginctl lock-session"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

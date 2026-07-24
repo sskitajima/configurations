@@ -1,0 +1,17 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+# Exec=/home/kitajima/AppImage/Obsidian-1.12.7.AppImage --no-sandbox
+Exec=/home/kitajima/AppImage/Obsidian-1.12.7.AppImage --no-sandbox %u
+Terminal=false
+Hidden=false
+NoDisplay=false
+MimeType=text/html;x-scheme-handler/obsidian;
+Categories=Office;
+X-GNOME-Autostart-enabled=true
+Name[ja]=Obsidian
+Name=Obsidian
+Comment[ja]=Obsidian Note Application
+Comment=Obsidian Note Application
+Icon=/home/kitajima/AppImage/Obsidian_Logo.jpeg
+

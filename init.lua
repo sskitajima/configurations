@@ -165,3 +165,19 @@ vim.g.lightline = { colorscheme = 'horizon' }
 -- Plugin git-gutter
 --------------------------
 vim.g.gitgutter_highlight_lines = 1
+
+--------------------------
+-- Plugin coc.nvim
+--------------------------
+vim.keymap.set('i', '<Tab>', function()
+  return vim.fn['coc#pum#visible']() == 1 and vim.fn['coc#pum#next'](1) or '<Tab>'
+end, { expr = true, silent = true })
+
+vim.keymap.set('i', '<S-Tab>', function()
+  return vim.fn['coc#pum#visible']() == 1 and vim.fn['coc#pum#prev'](1) or '<S-Tab>'
+end, { expr = true, silent = true })
+
+vim.keymap.set('i', '<cr>', function()
+  return vim.fn['coc#pum#visible']() == 1 and vim.fn['coc#pum#confirm']() or '<CR>'
+end, { expr = true, silent = true })
+

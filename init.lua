@@ -36,6 +36,11 @@ vim.opt.clipboard:append('unnamedplus,unnamed')
 vim.opt.showmatch = true
 vim.opt.matchtime = 1
 
+-- 折り返して表示
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true
+
 -- コメントの色を水色
 vim.cmd('highlight Comment ctermfg=3')
 

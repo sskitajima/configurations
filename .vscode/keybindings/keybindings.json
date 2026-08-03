@@ -30,6 +30,16 @@
     "command": "-selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
+  {
+    "key": "ctrl+g",
+    "command": "-workbench.action.gotoLine",
+    "when": ""
+  },
+  {
+    "key": "ctrl+g",
+    "command": "-workbench.action.terminal.goToRecentDirectory",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
   // Toggle maximized panel
   {
     "key": "ctrl+alt+m",
@@ -47,4 +57,3 @@
     }
   },
 ]
-

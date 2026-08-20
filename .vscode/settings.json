@@ -31,10 +31,6 @@
     ],
     //// diffEditor ////
     "diffEditor.ignoreTrimWhitespace": false,
-    //// remote SSH ////
-    "remote.SSH.remotePlatform": {
-        "192.168.xxx.xxx": "linux",
-    },
     //// Files ////
     "files.associations": {
         "*.repos": "yaml",
@@ -105,7 +101,13 @@
         "--max-line-length=80",
         "--max-complexity=10",
     ],
-    ,
+    //// XML ////
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+    },
+    "xml.format.maxLineWidth": 120,
     /////////////////////////////////////// Extention settings
     //// remote SSH ////
     "remote.SSH.remotePlatform": {
@@ -299,6 +301,7 @@
             "icon": "terminal-powershell"
         }
     },
+    "terminal.integrated.defaultProfile.linux": "zsh",
     //// CMake ////
     "cmake.showOptionsMovedNotification": false,
     "cmake.buildDirectory": "${workspaceFolder}/../build",

@@ -56,4 +56,10 @@
       ]
     }
   },
+  // Opens Sidebar and enable users to input something
+  {
+    "key": "ctrl+alt+i",
+    "command": "claude-vscode.sidebar.open",
+    "when": ""
+  }
 ]

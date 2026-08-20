@@ -31,6 +31,10 @@
     ],
     //// diffEditor ////
     "diffEditor.ignoreTrimWhitespace": false,
+    //// remote SSH ////
+    "remote.SSH.remotePlatform": {
+        "192.168.xxx.xxx": "linux",
+    },
     //// Files ////
     "files.associations": {
         "*.repos": "yaml",
@@ -50,7 +54,14 @@
     //// workbench ////
     // "workbench.editor.enablePreview": false,
     "workbench.preferredLightColorTheme": "Visual Studio 2017 Light - C++",
+    "workbench.settings.editor": "json",
     "workbench.colorTheme": "Visual Studio 2017 Light - C++",
+    //// Others ////
+    "update.showReleaseNotes": false,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "chat.disableAIFeatures": true,
     /////////////////////////////////////// Language settings
     //// CPP ////
     "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
@@ -94,14 +105,13 @@
         "--max-line-length=80",
         "--max-complexity=10",
     ],
-    //// Others ////
-    "update.showReleaseNotes": false,
+    ,
     /////////////////////////////////////// Extention settings
     //// remote SSH ////
     "remote.SSH.remotePlatform": {
         "192.168.xxx.xxx": "linux",
     },
-    ////// Code Spell Checker ////
+    //// Code Spell Checker ////
     "cSpell.userWords": [
         "RTPS",
         "athackst",
@@ -114,6 +124,7 @@
         "devcontainer",
         "ints",
         "noqa",
+        "Odometry",
         "pytest",
         "rclcpp",
         "rclpy",
@@ -231,6 +242,12 @@
         "<C-h>": false,
         "<C-p>": false
     },
+    //// NeoVim ////
+    "vscode-neovim.compositeKeys": {
+        "jj": {
+            "command": "vscode-neovim.escape",
+        },
+    },
     //// Terminal ////
     "terminal.integrated.defaultProfile.windows": "Anaconda Prompt",
     "terminal.integrated.profiles.windows": {
@@ -285,6 +302,8 @@
     "cmake.configureOnEdit": false,
     "cmake.automaticReconfigure": false,
     "cmake.configureOnOpen": false,
+    //// Claude Code ////
+    "claudeCode.preferredLocation": "panel",
     //// LaTex workshop ////
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.latex.clean.fileTypes": [

@@ -250,6 +250,9 @@
     },
     //// Terminal ////
     "terminal.integrated.defaultProfile.windows": "Anaconda Prompt",
+    "terminal.integrated.commandsToSkipShell": [
+        "-workbench.action.quickOpen"
+    ],
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
             "source": "PowerShell",

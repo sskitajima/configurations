@@ -61,5 +61,11 @@
     "key": "ctrl+alt+i",
     "command": "claude-vscode.sidebar.open",
     "when": ""
+  },
+  // Enable tab closing with "ctrl+w" in a preview window
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "!editorTextFocus && !terminalFocus"
   }
 ]

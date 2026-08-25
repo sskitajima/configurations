@@ -1,5 +1,5 @@
 [
-  // Suggession with n and p
+  // Suggestion with n and p
   {
     "key": "ctrl+n",
     "command": "selectNextSuggestion",
@@ -67,5 +67,15 @@
     "key": "ctrl+w",
     "command": "workbench.action.closeActiveEditor",
     "when": "!editorTextFocus && !terminalFocus"
-  }
+  },
+  // Toggle terminal settings to make it compatible with Linux VSCode
+  {
+    "key": "ctrl+oem_3",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+shift+oem_3",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
 ]

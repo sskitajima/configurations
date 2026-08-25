@@ -49,9 +49,8 @@
     },
     //// workbench ////
     // "workbench.editor.enablePreview": false,
-    "workbench.preferredLightColorTheme": "Visual Studio 2017 Light - C++",
     "workbench.settings.editor": "json",
-    "workbench.colorTheme": "Visual Studio 2017 Light - C++",
+    "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
     //// Others ////
     "update.showReleaseNotes": false,
     "extensions.experimental.affinity": {

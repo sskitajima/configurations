@@ -42,7 +42,7 @@
   },
   // Toggle maximized panel
   {
-    "key": "ctrl+alt+m",
+    "key": "ctrl+k ctrl+m",
     "command": "workbench.action.toggleMaximizedPanel"
   },
   // Switch between file explorer and editor

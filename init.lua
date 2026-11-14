@@ -1,9 +1,3 @@
-if vim.g.vscode then
-    -- VSCode extension
-else
-    -- ordinary Neovim
-end
-
 --------------------------
 -- 基本設定
 --------------------------
@@ -146,6 +140,7 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'MeanderingProgrammer/render-markdown.nvim'
 call plug#end()
 ]])
 

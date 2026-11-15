@@ -43,7 +43,7 @@
 		"body": [
 			"using namespace std;"
 		],
-		"description": "Declare using namesapce std;"
+		"description": "Declare using namespace std;"
 	},
 	"int_main": {
 		"prefix": "int main",
@@ -57,7 +57,7 @@
 	"basic for loop": {
 		"prefix": "for (int i = 0;",
 		"body": [
-			"for (int i = 0; i < N; ++i) {",
+			"for (int i = 0; i < n; ++i) {",
 			"  ",
 			"}",
 		],
